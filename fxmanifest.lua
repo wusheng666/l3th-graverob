@@ -3,7 +3,7 @@ lua54 'yes'
 game 'gta5'
 use_experimental_fxv2_oal 'yes'
 author 'L3th'
-version 'v1.0.0'
+version 'v1.0.1'
 repository 'https://github.com/L9th/l3th-graverob'
 description 'Grave Robbery'
 
@@ -35,5 +35,5 @@ server_scripts {
 }
 
 escrow_ignore {
-    '*/*'
+    '*/**/*.lua',
 }
