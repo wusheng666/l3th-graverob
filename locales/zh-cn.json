@@ -1,0 +1,30 @@
+{
+  "dispatch": {
+    "title": "可疑活动",
+    "code": "112",
+    "priority": "优先级 3",
+    "message": "有人报告可疑活动，可能正在发生抢劫。"
+  },
+
+  "job": {
+    "target_label": "挖掘坟墓",
+    "progress_label": "正在盗墓...",
+    "cancelled": "盗墓任务已取消！",
+    "accepted": "你已接受任务！查看你的 GPS！你有 %d 分钟！",
+    "failed": "你未能挖开坟墓。",
+    "completed_rare": "你成功盗墓并发现了一件稀有物品！",
+    "completed": "你成功盗墓了！",
+    "nothing_found": "你盗了墓，但没有发现任何有价值的东西。"
+  },
+
+  "error": {
+    "already_active": "你已经有一个进行中的任务。",
+    "no_active_job": "你没有进行中的任务。",
+    "not_near_location": "你不在墓地附近。",
+    "nothing_found": "你盗了墓，但没有发现任何有价值的东西。"
+  },
+
+  "other": {
+    "npc_start_label": "开始盗墓任务"
+  }
+}

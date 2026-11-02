@@ -8,6 +8,7 @@ local job = {
   active = false,
   blip = nil,
   targetZone = nil,
+  coords = nil,
 }
 
 local digAnim = {
@@ -32,7 +33,7 @@ local function startDigging()
       code = locale('dispatch.code'),
       priority = locale('dispatch.priority'),
       message = locale('dispatch.message'),
-      coords = objCoords,
+      coords = job.coords,
       showLocation = true,
       showDirection = false,
     })
@@ -67,6 +68,7 @@ end
 
 lib.callback.register('l3th-graverob:server:createJob', function(coords, misCoords, radius)
   job.active = true
+  job.coords = misCoords
 
   if job.blip then
     RemoveBlip(job.blip)
@@ -115,6 +117,7 @@ end
 
 RegisterNetEvent('l3th-graverob:client:stopJob', function()
   job.active = false
+  job.coords = nil
 
   if job.blip then
     RemoveBlip(job.blip)
@@ -197,5 +200,6 @@ AddEventHandler('onResourceStop', function(resource)
     job.active = false
     job.blip = nil
     job.targetZone = nil
+    job.coords = nil
   end
 end)

@@ -6,11 +6,17 @@ local inventory = require 'bridge.inventory.server'
 local job = {
   active = false,
   misCoords = nil,
+  timer = nil,
 }
 
 local function deleteJob(src)
   job.active = false
   job.misCoords = nil
+
+  if job.timer then
+    ClearTimeout(job.timer)
+    job.timer = nil
+  end
 
   if src then
     TriggerClientEvent('l3th-graverob:client:stopJob', src)
@@ -50,7 +56,7 @@ lib.callback.register('l3th-graverob:server:requestJob', function(source)
   })
 
   -- Create a timeout for the job, if the player doesn't complete it within the time, it will be cancelled
-  SetTimeout(svConfig.timeLimit * 60 * 1000, function() -- Time limit from config
+  job.timer = SetTimeout(svConfig.timeLimit * 60 * 1000, function() -- Time limit from config
     if job.active then
       job.active = false
       utils.notify({

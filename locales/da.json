@@ -18,7 +18,10 @@
   },
   
   "error": {
-    "already_active": "Du har allerede en aktiv opgave."
+    "already_active": "Du har allerede en aktiv opgave.",
+    "no_active_job": "Du har ikke en aktiv opgave.",
+    "not_near_location": "Du er ikke i nærheden af gravstedet.",
+    "nothing_found": "Du har røvet gravstedet, men fandt intet af værdi."
   },
 
   "other": {

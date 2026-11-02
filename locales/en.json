@@ -18,7 +18,10 @@
   },
   
   "error": {
-    "already_active": "You already have an active task."
+    "already_active": "You already have an active task.",
+    "no_active_job": "You don't have an active job.",
+    "not_near_location": "You are not near the grave location.",
+    "nothing_found": "You robbed the grave, but found nothing of value."
   },
 
   "other": {
